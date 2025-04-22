@@ -6,6 +6,7 @@ import SignInButton from "./components/SignInButton";
 
 import { auth } from "@/auth";
 import Image from "next/image";
+import SignOutButton from "./components/SignOutButton";
 
 export default async function HomePage() {
   const session = await auth();
@@ -25,6 +26,7 @@ export default async function HomePage() {
             style={{ borderRadius: "50%" }}
           />
         )}
+        <SignOutButton />
       </div>
     );
   }
