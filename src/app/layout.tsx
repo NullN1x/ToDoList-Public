@@ -22,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable}`}>
       <Navbar />
-      <body className="flex flex-col gap-y-20 overflow-hidden md:gap-y-32">
-        {children}
-      </body>
+      <main>
+        <body className="bg-body flex flex-col gap-y-20 overflow-hidden overflow-y-auto md:gap-y-32">
+          {children}
+        </body>
+      </main>
       <Footer />
     </html>
   );

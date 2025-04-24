@@ -1,7 +1,7 @@
 "use server";
 
 import Link from "next/link";
-
+import "@/styles/globals.css";
 import SignInButton from "./components/SignInButton";
 
 import { auth } from "@/auth";
@@ -13,7 +13,7 @@ export default async function HomePage() {
 
   if (session?.user) {
     return (
-      <div>
+      <div className="text-heading-2">
         <h1>NextAuth v5 + Next 15</h1>
         <p>User signed in with name: {session.user.name}</p>
         <p>User signed in with name: {session.user.email}</p>
@@ -31,7 +31,7 @@ export default async function HomePage() {
     );
   }
   return (
-    <div>
+    <div className="text-heading-2">
       <h1>Need Space</h1>
       <h1>You Are Not Signed In</h1>
       <SignInButton />
