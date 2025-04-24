@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import "@/styles/globals.css";
-import SignInButton from "./components/SignInButton";
+import SignInButton from "./components/SignInAndOutButtons/SignInButton";
 
 import { auth } from "@/auth";
 import Image from "next/image";
-import SignOutButton from "./components/SignOutButton";
+import SignOutButton from "./components/SignInAndOutButtons/SignOutButton";
 
 export default async function HomePage() {
   const session = await auth();
